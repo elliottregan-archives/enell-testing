@@ -1,0 +1,21 @@
+{
+  "name": "Arise",
+  "version": "0.0.1",
+  "authors": [
+    "Elliott Regan <regan.elliott@gmail.com>"
+  ],
+  "description": "Static pages for Spokies",
+  "license": "Commercial",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angular": "1.4.3",
+    "angular-animate": "~1.4.3",
+    "select2": "~4.0.0"
+  }
+}

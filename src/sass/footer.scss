@@ -1,0 +1,78 @@
+.footer-columns {
+  @include media($medium-screen-up) {
+    @include display(flex);
+    @include flex-wrap(wrap);
+  }
+}
+
+.footer-column {
+
+
+  border: $base-border;
+  margin-bottom: 1rem;
+
+  @include padding(1rem);
+
+  @include media($medium-screen-up) {
+    @include span-columns(3);
+    @include flex(1);
+    @include omega(3n);
+  };
+
+  @include media($large-screen-up) {
+    @include span-columns(3);
+    @include omega-reset(3n);
+  };
+
+}
+
+.footer-column.signup-column {
+
+
+  @include media($medium-screen-up) {
+    @include flex(none);
+    @include span-columns(7);
+    @include shift(1);
+    border: none;
+  }
+
+  @include media($large-screen-up) {
+    @include span-columns(3);
+    @include shift(0);
+    @include omega-reset(3n);
+    border: $base-border;
+  };
+}
+
+.footer-logo {
+  background-color: whitesmoke;
+  width: 160px;
+  height: rem(40px);
+  margin: rem(30px) auto;
+  display: block;
+}
+
+.legal-stuff {
+  text-align: center;
+  margin: 0;
+}
+
+.follow-us {
+  text-align: center;
+}
+
+.round-social-links {
+
+
+  .social-link {
+    display: inline-block;
+    @include size(3rem);
+    border-radius: 3rem;
+    background-color: $light-grey;
+    color: white;
+
+    &:hover {
+      background-color: $brand-purple;
+    }
+  }
+}

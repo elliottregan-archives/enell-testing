@@ -1,0 +1,40 @@
+// Typography
+$base-font-family: Helvetica;
+$heading-font-family: $base-font-family;
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+
+// Colors
+$brand-purple: #5e1c81;
+$light-grey: #ececec;
+$dark-grey: #262626;
+
+// Font Colors
+$base-font-color: $dark-grey;
+$action-color: $brand-purple;
+
+// Border
+$base-border-color: $light-grey;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: $light-grey;
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;

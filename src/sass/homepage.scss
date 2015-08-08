@@ -1,0 +1,166 @@
+.homepage-hero {
+
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+
+  .image {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    max-width: none;
+    top:0;
+    left: -75%;
+    margin-left: 25%;
+
+    @include media($medium-screen-up) {
+      height: 100%;
+      width: auto;
+      left: 0;
+      margin-left: 0;
+    }
+  }
+
+  .text-content {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+  }
+}
+
+$card-padding: 1rem;
+
+.homepage-cards {
+
+  .homepage-card {
+    background-color: white;
+    border: $base-border;
+    padding: $card-padding;
+    overflow: hidden;
+
+    @include media($medium-screen-up) {
+      @include span-columns(2);
+      height: 300px;
+    }
+
+    @include media($large-screen-up) {
+      @include span-columns(3);
+    }
+
+    .image, .text-content {
+      display: block;
+    }
+
+    .text {
+      height: 1em*$base-line-height*3;
+      overflow: hidden;
+    }
+
+    .image-content {
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .image {
+      width: 100%;
+      margin: auto auto 1rem;
+
+      @include media($medium-screen-up) {
+        width: 150px;
+      }
+    }
+  }
+
+  .homepage-card.featured {
+    padding: 0;
+
+    .image, .text-content {
+      @include media($medium-screen-up) {
+        @include span-columns(2.5 of 5);
+      }
+
+      @include media($large-screen-up) {
+        @include span-columns(3 of 6);
+      }
+    }
+
+    .text-content {
+      @include span-columns(2.5 of 5);
+      padding: $card-padding;
+    }
+
+    @include media($medium-screen-up) {
+      @include span-columns(5);
+    }
+
+    @include media($large-screen-up) {
+      @include span-columns(6);
+    }
+  }
+
+}
+
+.featured-blog-post {
+
+  margin: 2rem auto;
+  overflow: hidden;
+
+  .image-content {
+
+    height: 200px;
+    overflow: hidden;
+
+    @include media($medium-screen-up) {
+      @include span-columns(3);
+      @include omega(1);
+    }
+
+    @include media($large-screen-up) {
+      @include span-columns(5);
+      @include omega(1);
+    }
+
+    .image {
+      width: 100%;
+      height: auto;
+      max-width: none;
+      display: inline-block;
+      @include media($large-screen-up) {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .text-content {
+
+    padding: 2rem;
+    border: 1px solid white;
+    border-left: none;
+    height: 200px;
+
+    @include media($medium-screen-up) {
+      @include span-columns(6);
+    }
+
+    @include media($large-screen-up) {
+      @include span-columns(7);
+    }
+  }
+
+  .text {
+    height: 1em*$base-line-height*3;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    &::after {
+      content:"...";
+      font-weight:bold;
+      position:absolute;
+      bottom:0;
+      right:0;
+      padding:0 20px 1px 45px;
+    }
+  }
+}

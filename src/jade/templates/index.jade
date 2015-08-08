@@ -1,0 +1,49 @@
+doctype html
+html
+  head
+    include ../chunks/_head.jade
+  body.homepage
+    .slideaway_wrapper
+      header
+        include ../chunks/_header.jade
+      main
+        section.content.light_grey
+          .content-container
+            .homepage-hero
+              img.image(src="https://unsplash.it/960/300?image=554")
+              .text-content
+                h2 Enell Bra Description
+                p Maecenas volutpat lacus vitae arcu semper, a bibendum urna viverra. Suspendisse congue dolor nec commodo volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus commodo vulputate elementum. Nam sed urna non tellus vulputate molestie sit amet at sapien.
+        section.content.light_grey
+          .content-container
+            .homepage-cards
+              .homepage-card.featured
+                .image-content
+                  img.image(src="https://unsplash.it/200/300")
+                .text-content
+                  h2.title Featured
+                  .featured-color Raspberry Citrus
+                  p.text Sed vehicula nibh sit amet cursus semper. Nullam mauris quam, vulputate nec est et, pellentesque mattis mi. Cras feugiat commodo magna, et hendrerit arcu adipiscing et. Nulla facilisi.
+              .homepage-card
+                .image-content
+                  img.image(src="https://unsplash.it/300/300")
+                .text-content
+                  h2.title Sport
+                  p.text Quisque venenatis orci nec nisl bibendum, id pharetra turpis vulputate. Etiam placerat elit vel iaculis eleifend. Sed sit amet arcu a quam commodo pharetra eget eget elit. Cras dignissim accumsan tellus, sit amet vulputate orci porttitor non.
+              .homepage-card
+                .image-content
+                  img.image(src="https://unsplash.it/300/300")
+                .text-content
+                  h2.title Lite
+                  p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed sapien quam. Sed dapibus est id enim facilisis, at posuere turpis adipiscing. Quisque sit amet dui dui.
+        section.content.grey
+          .content-container
+            .featured-blog-post
+              .image-content
+                img.image(src="https://unsplash.it/390/200")
+              .text-content
+                h3.title Blog Post Featured Here
+                p.text Maecenas volutpat lacus vitae arcu semper, a bibendum urna viverra. Suspendisse congue dolor nec commodo volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus commodo vulputate elementum. Nam sed urna non tellus vulputate molestie sit amet at sapien.
+              
+      footer
+        include ../chunks/_footer.jade

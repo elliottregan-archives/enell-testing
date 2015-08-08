@@ -1,0 +1,33 @@
+@import "bourbon";
+@import "neat";
+@import "bitters/_base.scss";
+
+@import "header.scss";
+@import "footer.scss";
+@import "homepage.scss";
+
+.content {
+
+  // @include padding(2rem 0);
+
+  &.purple {
+    background-color: $brand-purple;
+    color: #fff;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  &.grey {
+    background-color: $light-grey;
+  }
+
+  &.light_grey {
+    background-color: lighten($light-grey, 5%);
+  }
+}
+
+.content-container {
+  @include outer-container();
+}
