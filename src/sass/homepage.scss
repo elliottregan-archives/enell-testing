@@ -19,6 +19,11 @@
       left: 0;
       margin-left: 0;
     }
+
+    @include media($large-screen-up) {
+      width: 100%;
+      height: auto;
+    }
   }
 
   .text-content {
@@ -35,8 +40,9 @@ $card-padding: 1rem;
   .homepage-card {
     background-color: white;
     border: $base-border;
-    padding: $card-padding;
+    margin-bottom: 1rem;
     overflow: hidden;
+    @include span-columns(3);
 
     @include media($medium-screen-up) {
       @include span-columns(2);
@@ -47,8 +53,9 @@ $card-padding: 1rem;
       @include span-columns(3);
     }
 
-    .image, .text-content {
+    .image {
       display: block;
+      width: 100%;
     }
 
     .text {
@@ -57,26 +64,28 @@ $card-padding: 1rem;
     }
 
     .image-content {
-      height: 300px;
+      height: 150px;
       overflow: hidden;
     }
 
-    .image {
-      width: 100%;
-      margin: auto auto 1rem;
-
-      @include media($medium-screen-up) {
-        width: 150px;
-      }
+    .text-content {
+      padding: $card-padding;
     }
+
   }
 
   .homepage-card.featured {
     padding: 0;
+    @include span-columns(6);
 
-    .image, .text-content {
+    .image-content, .text-content {
+
+      height: 300px;
+
       @include media($medium-screen-up) {
         @include span-columns(2.5 of 5);
+        height: auto;
+        @include omega(1);
       }
 
       @include media($large-screen-up) {
@@ -84,9 +93,12 @@ $card-padding: 1rem;
       }
     }
 
+    .image-content {
+
+    }
+
     .text-content {
       @include span-columns(2.5 of 5);
-      padding: $card-padding;
     }
 
     @include media($medium-screen-up) {
@@ -102,7 +114,6 @@ $card-padding: 1rem;
 
 .featured-blog-post {
 
-  margin: 2rem auto;
   overflow: hidden;
 
   .image-content {
@@ -135,12 +146,14 @@ $card-padding: 1rem;
   .text-content {
 
     padding: 2rem;
+    margin: 2rem;
     border: 1px solid white;
-    border-left: none;
     height: 200px;
 
     @include media($medium-screen-up) {
       @include span-columns(6);
+      border-left: none;
+      margin: auto;
     }
 
     @include media($large-screen-up) {

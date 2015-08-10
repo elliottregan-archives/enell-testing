@@ -5,10 +5,14 @@
 @import "header.scss";
 @import "footer.scss";
 @import "homepage.scss";
+@import "standard.scss";
+@import "lifestyle.scss";
 
 .content {
 
-  // @include padding(2rem 0);
+  &.vertically-padded {
+    @include padding(4rem 0);
+  }
 
   &.purple {
     background-color: $brand-purple;

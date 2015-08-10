@@ -1,0 +1,88 @@
+.standard-hero {
+
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+
+  .image {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    max-width: none;
+    top:0;
+    left: -75%;
+    margin-left: 25%;
+
+    @include media($medium-screen-up) {
+      height: 100%;
+      width: auto;
+      left: 0;
+      margin-left: 0;
+    }
+
+    @include media($large-screen-up) {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .text-content {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+  }
+}
+
+.standard-content {
+
+  &.with-sidebar {
+    @include media($medium-screen-up) {
+      @include span-columns(6);
+    }
+
+    @include media($large-screen-up) {
+      @include span-columns(8);
+    }
+  }
+
+  .full-width-image {
+    width: 100%;
+    display: block;
+  }
+
+  .float-left-image {
+    display: block;
+    width: 100%;
+
+    @include media($medium-screen-up) {
+      float: left;
+    }
+  }
+
+  .float-right-image {
+    display: block;
+    width: 100%;
+
+    @include media($medium-screen-up) {
+      float: right;
+    }
+  }
+
+  .pull-quote {
+    clear: both;
+    background-color: $light-grey;
+    border-radius: 4px;
+    padding: 2rem;
+    margin: 2rem auto;
+  }
+
+  .block-quote {
+    clear: both;
+    padding: 2rem;
+    margin: 2rem auto;
+    text-transform: uppercase;
+    color: $brand-purple;
+    font-weight: 600;
+  }
+
+}

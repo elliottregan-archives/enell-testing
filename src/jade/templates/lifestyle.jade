@@ -1,0 +1,71 @@
+doctype html
+html
+  head
+    include ../chunks/_head.jade
+  body.homepage
+    .slideaway_wrapper
+      header
+        include ../chunks/_header.jade
+      main
+        section.content.light_grey
+          .content-container
+            .standard-hero
+              img.image(src="https://unsplash.it/960/400?image=564")
+              //- .text-content
+              //-   h2 Enell Bra Description
+              //-   p Maecenas volutpat lacus vitae arcu semper, a bibendum urna viverra. Suspendisse congue dolor nec commodo volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus commodo vulputate elementum. Nam sed urna non tellus vulputate molestie sit amet at sapien.
+        section.content
+          article.content-container.standard-content
+            h1 Lifestyle
+            article.recent-post
+              h2.topic Fitness
+              img.thumbnail(src="https://unsplash.it/230/160?image=187")
+              h3.title Recent Blog Post Title
+              h4.subtitle 
+                date 01.20.1974
+                span Author Name
+                span Topic
+              p Suspendisse quis lacus nulla. Nullam et nibh ligula. Nunc vitae nulla et arcu mollis iaculis. Vestibulum venenatis risus ut ligula lacinia malesuada.
+              .continue-link: a(href="#") Read More
+
+            article.recent-post
+              h2.topic Wellness
+              img.thumbnail(src="https://unsplash.it/230/160?image=186")
+              h3.title Recent Blog Post Title
+              h4.subtitle 
+                date 01.20.1974
+                span Author Name
+                span Topic
+              p Suspendisse quis lacus nulla. Nullam et nibh ligula. Nunc vitae nulla et arcu mollis iaculis. Vestibulum venenatis risus ut ligula lacinia malesuada.
+              .continue-link: a(href="#") Read More
+            
+            article.recent-post
+              h2.topic Food
+              img.thumbnail(src="https://unsplash.it/230/160?image=321")
+              h3.title Recent Blog Post Title
+              h4.subtitle 
+                date 01.20.1974
+                span Author Name
+                span Topic
+              p Suspendisse quis lacus nulla. Nullam et nibh ligula. Nunc vitae nulla et arcu mollis iaculis. Vestibulum venenatis risus ut ligula lacinia malesuada.
+              .continue-link: a(href="#") Read More
+        section.content.light-grey
+          .content-container
+            a(href="#").block-image-link
+              .block-image
+                img.image(src="https://unsplash.it/310/200")
+              .block-text-content
+                .block-title Shop Lite
+            a(href="#").block-image-link
+              .block-image
+                img.image(src="https://unsplash.it/310/200?image=532")
+              .block-text-content
+                .block-title Community
+            a(href="#").block-image-link
+              .block-image
+                img.image(src="https://unsplash.it/310/200?image=531")
+              .block-text-content
+                .block-title Shop Sport
+
+      footer
+        include ../chunks/_footer.jade
