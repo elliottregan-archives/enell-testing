@@ -12,13 +12,14 @@ body {
 @import "standard.scss";
 @import "lifestyle.scss";
 @import "community.scss";
+@import "store.scss";
 
 .content {
 
   &.vertically-padded {
     @include media($medium-screen-up) {
       @include padding(4rem 0);
-      
+
     }
   }
 

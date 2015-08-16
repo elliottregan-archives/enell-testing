@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    include ../chunks/_head.jade
+  body.homepage
+    .slideaway_wrapper
+      header
+        include ../chunks/_header.jade
+      main
+        section.content.light_grey.vertically-padded
+          .content-container.store-header
+            .main-image.store-hero
+              .image-content
+                img.image(src="https://unsplash.it/960/540")
+              .text-content
+                h2.title Performance Apparel for Well Endowed Women
+            .secondary-images
+              .store-card
+                .image-content
+                  img.image(src="https://unsplash.it/220/220?image=42")
+                .text-content
+                  button.btn-default Sport
+              .store-card
+                .image-content
+                  img.image(src="https://unsplash.it/220/220?image=43")
+                .text-content
+                  button.btn-default Lite
+
+            
+      footer
+        include ../chunks/_footer.jade

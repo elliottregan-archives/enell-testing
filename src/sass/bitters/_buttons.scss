@@ -2,15 +2,15 @@
   appearance: none;
   background-color: $action-color;
   border: 0;
-  border-radius: $base-border-radius;
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-family: $heading-font-family;
+  font-size: 1.2rem;
+  text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.2;
   padding: $small-spacing $base-spacing;
   text-decoration: none;
   transition: background-color $base-duration $base-timing;
@@ -27,9 +27,15 @@
   &:disabled {
     cursor: not-allowed;
     opacity: 0.5;
+    background-color: $light-grey;
+
 
     &:hover {
-      background-color: $action-color;
+      background-color: $light-grey;
     }
   }
+}
+
+.btn-default {
+
 }

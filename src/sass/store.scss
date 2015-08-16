@@ -1,0 +1,97 @@
+.store-header {
+  @include media($medium-screen-up) {
+    @include display(flex);
+  }
+
+  .main-image {
+    @include media($medium-screen-up) {
+      @include span-columns(6);
+      @include flex(2);
+    }
+
+    @include media($large-screen-up) {
+      @include span-columns(9);
+    }
+  }
+
+  .secondary-images {
+    @include media($medium-screen-up) {
+      @include span-columns(3);
+      @include flex(1);
+    }
+  }
+}
+
+.store-hero {
+
+  position: relative;
+  overflow: hidden;
+  border: $base-border;
+  height: 400px;
+
+  @include media($medium-screen-up) {
+    height: auto;
+  }
+
+  .image {
+    position: absolute;
+    height: 400px;
+    width: auto;
+    max-width: none;
+    top:0;
+
+    @include media($medium-screen-up) {
+      height: 100%;
+      width: auto;
+    }
+
+  }
+
+  .text-content {
+    position: absolute;
+    @extend %description;
+    bottom: 0;
+    background-color: transparentize(black, .5);
+    padding: 1rem;
+    color: white;
+    width: 100%;
+    font-size: 1rem;
+
+    @include media($medium-screen-up) {
+      bottom: 10%;
+      left: 0;
+    }
+
+    .title {
+      max-width: 60%;
+      line-height: .9;
+    }
+  }
+}
+
+.store-card {
+  margin-bottom: 1rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .image {
+    display: block;
+    width: 100%;
+  }
+
+
+  .image-content {
+    overflow: hidden;
+    background-color: white;
+    border: $base-border;
+  }
+
+  .btn-default {
+    width: 100%;
+    display: block;
+
+  }
+
+}
