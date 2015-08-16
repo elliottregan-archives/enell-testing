@@ -33,10 +33,6 @@ gulp.task('watch', function() {
   gulp.watch(SRC+'/sass/**/*.scss', ['styles']);
   gulp.watch(SRC+'/scripts/*.coffee', ['scripts']);
   gulp.watch(SRC+'/images/*.*', ['images']);
-
-  gulp.watch(SRC+'/angular/*.coffee', ['angular-config']);
-  gulp.watch(SRC+'/angular/controllers/*.coffee', ['angular-controllers']);
-  gulp.watch(SRC+'/angular/directives/*.coffee', ['angular-directives']);
 });
 
 gulp.task('templates', function() {
@@ -93,12 +89,12 @@ gulp.task('images', function() {
 });
 
 gulp.task('scripts', function() {
-  gulp.src('src/scripts/*.coffee')
-    .pipe(newer(DEST+'/js'))
-    .pipe(concat('scripts.coffee'))
-    .pipe(sourcemaps.init())
-    .pipe(coffee({bare:true})).on('error', gutil.log)
+  gulp.src('src/scripts/*')
+    // .pipe(newer(DEST+'/js'))
+    .pipe(gulpif(/[.]coffee$/, coffee({bare:true}).on('error', gutil.log)))
+    .pipe(concat('scripts.js'))
     .pipe(gulp.dest(DEST+'/js'))
+    .pipe(sourcemaps.init())
     .pipe(gulpif(dev,lr()));
 });
 
@@ -135,20 +131,12 @@ gulp.task('angular-directives', function() {
 gulp.task('bower', function() {
   gulp.src([
     'bower_components/jquery/dist/jquery.min.js',
-    'bower_components/angular/angular.min.js',
-    "bower_components/angular-animate/angular-animate.min.js",
+    'src/scripts/*.js',
     ])
     .pipe(concat('bower_components.js'))
     .pipe(gulp.dest(DEST+'/js'));
   gulp.src([
     'bower_components/jquery/dist/jquery.min.map',
-    'bower_components/angular/angular.min.js.map',
-    'bower_components/select2/dist/js/select2.min.js',
-    'bower_components/angular-animate/angular-animate.min.js.map',
     ])
     .pipe(gulp.dest(DEST+'/js'));
-  gulp.src([
-    'bower_components/select2/dist/css/select2.min.css',
-    ])
-    .pipe(gulp.dest(DEST+'/styles'));
 });

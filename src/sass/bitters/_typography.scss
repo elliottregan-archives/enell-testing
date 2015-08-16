@@ -13,13 +13,62 @@ h4,
 h5,
 h6 {
   font-family: $heading-font-family;
-  font-size: $base-font-size;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
 }
 
+h1 {
+  font-size: modular-scale(5);
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: modular-scale(4);
+  text-transform: uppercase;
+}
+
+h2%alt-heading {
+  color: $light-grey;
+}
+
+h3 {
+  font-size: modular-scale(2);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+h3%alt-heading {
+  font-family: $alt-heading-font-family;
+  font-weight: 400;
+  font-size: modular-scale(1);
+}
+
+h4 {
+  font-size: modular-scale(2);
+}
+
+h5 {
+  font-size: modular-scale(1);
+}
+
+h6 {
+  font-size: modular-scale(-1);
+}
+
 p {
+  // font-size: modular-scale(-1);
   margin: 0 0 $small-spacing;
+  line-height: $base-line-height;
+  font-weight: 300;
+}
+
+%alt-light {
+  color: lighten($dark-grey, 50%);
+}
+
+%description {
+  font-size: modular-scale(-1);
+  line-height: 1.5;
 }
 
 a {

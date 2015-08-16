@@ -2,7 +2,12 @@
 .recent-post {
 
   @include row();
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
+
+  @include media($large-screen-up) {
+    @include span-columns(10);
+    @include shift(1);
+  };
 
   .thumbnail {
     float: left;
@@ -10,26 +15,55 @@
   }
 
   .topic {
-    color: darken($light-grey, 20%);
-    text-transform: uppercase;
+    color: darken($light-grey, 10%);
+    font-size: modular-scale(3);
+    font-weight: 400;
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    // text-transform: uppercase;
     border-bottom: 2px solid $light-grey;
+
   }
 
   .title {
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 400;
+    font-family: $alt-heading-font-family;
   }
 
   .subtitle {
     color: $brand-purple;
-    font-size: .5em;
+    font-family: $base-font-family;
+    text-transform: uppercase;
+    font-size: modular-scale(-1);
+    font-weight: 600;
+    letter-spacing: .1em;
+  }
+
+  .text {
+    @extend %alt-light;
+  }
+
+  &.featured {
+
+    @include media($large-screen-up) {
+      @include span-columns(12);
+      @include shift(0);
+    };
+
+    .text {
+      color: black;
+    }
   }
 
 }
 
+
+
 .block-image-link {
 
   position: relative;
+  @include span-columns(6);
 
   @include media($medium-screen-up) {
     @include span-columns(3);
@@ -45,6 +79,7 @@
 
   .image {
     display: block;
+    width: 100%;
   }
 
   .block-text-content {
@@ -55,6 +90,7 @@
     text-transform: uppercase;
     top: 0;
     bottom: 0;
+    font-size: 1.2rem;
 
     .block-title {
       top: 50%;

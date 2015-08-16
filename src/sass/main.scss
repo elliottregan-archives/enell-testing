@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 @import "bourbon";
 @import "neat";
 @import "bitters/_base.scss";
@@ -7,11 +11,15 @@
 @import "homepage.scss";
 @import "standard.scss";
 @import "lifestyle.scss";
+@import "community.scss";
 
 .content {
 
   &.vertically-padded {
-    @include padding(4rem 0);
+    @include media($medium-screen-up) {
+      @include padding(4rem 0);
+      
+    }
   }
 
   &.purple {
@@ -29,6 +37,10 @@
 
   &.light_grey {
     background-color: lighten($light-grey, 5%);
+  }
+
+  &.light_purple {
+    background-color: tint($brand-purple, 85%);
   }
 }
 

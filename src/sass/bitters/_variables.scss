@@ -1,18 +1,19 @@
 // Typography
-$base-font-family: Helvetica;
-$heading-font-family: $base-font-family;
+$heading-font-family: AlternateGotNo3D, 'Arial Narrow', Impact, sans-serif;
+$alt-heading-font-family: 'Novecento Sans Wide', 'Arial', sans-serif;
+$base-font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, sans-serif;
 
 // Font Sizes
-$base-font-size: 1em;
+$base-font-size: 14px;
 
 // Line height
-$base-line-height: 1.5;
+$base-line-height: 1.8;
 $heading-line-height: 1.2;
 
 // Other Sizes
 $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
-$small-spacing: $base-spacing / 2;
+$small-spacing: $base-spacing / 6;
 
 // Colors
 $brand-purple: #5e1c81;
