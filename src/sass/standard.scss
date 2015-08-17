@@ -80,9 +80,8 @@
     clear: both;
     padding: 2rem;
     margin: 2rem auto;
-    text-transform: uppercase;
-    color: $brand-purple;
-    font-weight: 600;
+    text-align: center;
+    @extend %block-quote-style;
   }
 
 }

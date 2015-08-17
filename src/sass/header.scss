@@ -47,6 +47,15 @@
     padding: rem(10px) .25rem;
   }
 
+  .header-link--text {
+    font-family: $alt-heading-font-family;
+    text-transform: uppercase;
+    color: $light-purple;
+    font-weight: 600;
+    font-size: .8em;
+    letter-spacing: .2em;
+  }
+
   .header-link--submenu {
     display: none;
   }

@@ -63,6 +63,7 @@
 .block-image-link {
 
   position: relative;
+  overflow: hidden;
   @include span-columns(6);
 
   @include media($medium-screen-up) {
@@ -72,6 +73,18 @@
   @include media($large-screen-up) {
     @include span-columns(4);
   };
+
+  &.pair {
+    @include media($medium-screen-up) {
+      @include span-columns(4.5);
+      max-height: 300px;
+    };
+
+    @include media($large-screen-up) {
+      @include span-columns(6);
+      max-height: 200px;
+    };
+  }
 
   .block-image {
     position: relative;

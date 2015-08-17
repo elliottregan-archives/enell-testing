@@ -7,11 +7,11 @@
 
 .footer-column {
 
-
   border: $base-border;
   margin-bottom: 1rem;
+  font-size: .7rem;
 
-  @include padding(1rem);
+  @include padding(2rem);
 
   @include media($medium-screen-up) {
     @include span-columns(3);
@@ -24,10 +24,20 @@
     @include omega-reset(3n);
   };
 
+  .footer-column--title {
+    font-weight: 500;
+  }
+
+  .footer-link--text {
+    color: darken($light-grey,20%);
+    font-family: $base-font-family;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
 }
 
 .footer-column.signup-column {
-
 
   @include media($medium-screen-up) {
     @include flex(none);

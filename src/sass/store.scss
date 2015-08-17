@@ -95,3 +95,27 @@
   }
 
 }
+
+.store-item-row {
+  @include row();
+
+  @include media($medium-screen-up) {
+    .store-item {
+      @include span-columns(3);
+
+      &.wide {
+        @include span-columns(6);
+      }
+    }
+  }
+
+  @include media($large-screen-up) {
+    .store-item {
+      @include span-columns(4);
+
+      &.wide {
+        @include span-columns(8);
+      }
+    }
+  }
+}

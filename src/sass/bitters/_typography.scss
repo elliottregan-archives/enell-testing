@@ -96,3 +96,15 @@ picture {
   margin: 0;
   max-width: 100%;
 }
+
+%block-quote-style {
+  text-transform: uppercase;
+  color: $brand-purple;
+  font-weight: 600;
+}
+
+.block-quote {
+  @extend %block-quote-style;
+  text-align: center;
+  padding: 4rem;
+}
