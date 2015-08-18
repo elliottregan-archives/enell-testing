@@ -47,4 +47,5 @@ body {
 
 .content-container {
   @include outer-container();
+  @include padding(0 1rem);
 }
