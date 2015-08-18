@@ -2,7 +2,31 @@ doctype html
 html
   head
     include ../chunks/_head.jade
-  body.homepage
+  body
+    .mobile-menu
+      button.sidebar-toggle
+        i.menu-icon.X-mode
+          .menu-icon__text
+      ul.mobile-links
+        li.mobile-link.mobile
+          a(href="/shop").mobile-link--text Shop
+          ul.mobile-link--submenu
+            li.submenu-link
+              a.submenu-link--text Enell Sport
+            li.submenu-link
+              a.submenu-link--text Enell Lite
+            li.submenu-link
+              a.submenu-link--text Accessories
+            li.submenu-link
+              a.submenu-link--text Retail
+        li.mobile-link
+          a(href="/fitting").mobile-link--text Fitting
+        li.mobile-link.mobile
+          a(href="/community").mobile-link--text Community
+        li.mobile-link
+          a(href="/lifestyle").mobile-link--text Lifestyle
+        li.mobile-link
+          a(href="/about").mobile-link--text About
     .slideaway_wrapper
       header
         include ../chunks/_header.jade

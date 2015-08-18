@@ -1,5 +1,5 @@
-header.site-header
-  .content-container.mini-strip
+header.site-header.mini-strip
+  .content-container
     a.mini-link
       i.icon-facebook
     a.mini-link tw
@@ -14,10 +14,13 @@ header.site-header
     a.mini-link
       i.icon-basket c (0)
       
+.content
   nav.content-container.header-nav
-    img(src="../images/logo-purple.svg").header-logo
+    a(href="/")
+      img(src="../images/logo-purple.svg").header-logo
+      img(src="../images/logo-grey.svg").header-logo.mobile
     ul.header-links
-      li.header-link
+      li.header-link.mobile
         a(href="/shop").header-link--text Shop
         ul.header-link--submenu
           li.submenu-link
@@ -30,9 +33,13 @@ header.site-header
             a.submenu-link--text Retail
       li.header-link
         a(href="/fitting").header-link--text Fitting
-      li.header-link
+      li.header-link.mobile
         a(href="/community").header-link--text Community
       li.header-link
         a(href="/lifestyle").header-link--text Lifestyle
       li.header-link
         a(href="/about").header-link--text About
+      li.header-link.mobile-only
+        button.sidebar-toggle
+          i.menu-icon
+            .menu-icon__text

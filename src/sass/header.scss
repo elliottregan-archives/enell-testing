@@ -7,6 +7,12 @@
   background-color: $brand-purple;
   text-align: right;
 
+  display: none;
+
+  @include media($medium-screen-up) {
+    display: block;
+  };
+
   .mini-link {
     display: inline-block;
     color: #fff;
@@ -21,19 +27,32 @@
 
 .header-nav {
 
-  display: none;
-  height: 100px;
+  // display: none;
+  background-color: $brand-purple;
 
   @include media($medium-screen-up) {
-    display: block;
+    height: 100px;
+    background-color: white;
   };
 
   .header-logo {
     float: left;
-    background-color: whitesmoke;
     width: 160px;
     margin: rem(30px) 0;
     height: rem(40px);
+    display: none;
+
+    @include media($medium-screen-up) {
+      display: block;
+    };
+
+    &.mobile {
+      display: block;
+      padding-left: 1rem;
+      @include media($medium-screen-up) {
+        display: none;
+      };
+    }
   }
 
   .header-links {
@@ -43,8 +62,24 @@
   }
 
   .header-link {
-    display: inline-block;
     padding: rem(10px) .25rem;
+    vertical-align: top;
+    display: none;
+
+    &.mobile {
+      display: inline-block;
+    }
+
+    &.mobile-only {
+      display: inline-block;
+      @include media($medium-screen-up) {
+        display: none;
+      };
+    }
+
+    @include media($medium-screen-up) {
+      display: inline-block;
+    };
   }
 
   .header-link--text {
@@ -58,5 +93,107 @@
 
   .header-link--submenu {
     display: none;
+  }
+}
+@mixin vendor($property, $value...){
+  -webkit-#{$property}:$value;
+    -moz-#{$property}:$value;
+      -ms-#{$property}:$value;
+        -o-#{$property}:$value;
+          #{$property}:$value;
+}
+
+button.sidebar-toggle {
+  background-color: transparent;
+}
+
+.menu-icon {
+  display: block;
+  width: 40px;
+  cursor: pointer;
+  @include vendor(transform, translate3d(0,-50%,0));
+
+  &:before,
+  &:after,
+  .menu-icon__text {
+    background: $light-purple;
+    @include vendor(border-radius, 3px);
+    content:'';
+    display:block;
+    height:2px;
+    margin:6px 0;
+    @include vendor(transition, all .2s ease-out);
+    width:100%;
+  }
+
+  .menu-icon__text {
+    text-indent:-9999px;
+  }
+
+  &.X-mode {
+    &:before {
+      @include vendor(transform, rotate(45deg) translate3d(5px,6px,0));
+      width:20px;
+    }
+
+    .menu-icon__text {
+      opacity: 0;
+    }
+
+    &:after {
+      @include vendor(transform, rotate(-45deg) translate3d(5px,-7px,0));
+      width:20px;
+    }
+  }
+}
+
+.mobile-menu {
+  position: absolute;
+
+  height: 100%;
+  width: 300px;
+  right: 0;
+  color: white;
+  z-index: 100;
+  background-color: tint($brand-purple, 15%);
+
+  @include vendor(transform, translate3d(100%,0,0));
+  @include transition(all 400ms ease-out);
+
+  &.in-view {
+    @include vendor(transform, translate3d(0,0,0));
+
+  }
+
+  @include media($medium-screen-up) {
+    display: none;
+  };
+
+  .mobile-links {
+    padding: 1rem 2rem;
+  }
+
+  .mobile-link--text {
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .mobile-link--submenu {
+    margin-bottom: 1rem;
+  }
+
+  .submenu-link--text {
+    color: white;
+    text-transform: uppercase;
+    padding-left: 1rem;
+    font-size: .9em;
+    letter-spacing: .1em;
+  }
+
+  .sidebar-toggle {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
   }
 }

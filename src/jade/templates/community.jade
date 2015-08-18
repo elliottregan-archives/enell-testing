@@ -2,7 +2,31 @@ doctype html
 html
   head
     include ../chunks/_head.jade
-  body.homepage
+  body
+    .mobile-menu
+      button.sidebar-toggle
+        i.menu-icon.X-mode
+          .menu-icon__text
+      ul.mobile-links
+        li.mobile-link.mobile
+          a(href="/shop").mobile-link--text Shop
+          ul.mobile-link--submenu
+            li.submenu-link
+              a.submenu-link--text Enell Sport
+            li.submenu-link
+              a.submenu-link--text Enell Lite
+            li.submenu-link
+              a.submenu-link--text Accessories
+            li.submenu-link
+              a.submenu-link--text Retail
+        li.mobile-link
+          a(href="/fitting").mobile-link--text Fitting
+        li.mobile-link.mobile
+          a(href="/community").mobile-link--text Community
+        li.mobile-link
+          a(href="/lifestyle").mobile-link--text Lifestyle
+        li.mobile-link
+          a(href="/about").mobile-link--text About
     .slideaway_wrapper
       header
         include ../chunks/_header.jade
@@ -21,7 +45,7 @@ html
               //-   p Maecenas volutpat lacus vitae arcu semper, a bibendum urna viverra. Suspendisse congue dolor nec commodo volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus commodo vulputate elementum. Nam sed urna non tellus vulputate molestie sit amet at sapien.
         section.content
           article.content-container.standard-content
-            h1 Lifestyle
+            h1 Community
             article.recent-post
               h2.topic Fitness
               img.thumbnail(src="https://unsplash.it/230/160?image=187")
