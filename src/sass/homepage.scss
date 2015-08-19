@@ -32,7 +32,9 @@
     bottom: 1rem;
     left: 1rem;
     @extend %description;
-    max-width: 40%;
+    @include media($medium-screen-up) {
+      max-width: 40%;
+    }
   }
 }
 
@@ -90,13 +92,21 @@ $card-padding: 1rem;
       @extend %alt-heading;
     }
 
+    @include media($medium-screen-up) {
+
+      .image {
+        height: 100%;
+        width: auto;
+      }
+    }
+
     .image-content, .text-content {
 
       height: 300px;
 
       @include media($medium-screen-up) {
         @include span-columns(2.5 of 5);
-        height: auto;
+        height: 100%;
         @include omega(1);
       }
 
@@ -105,9 +115,9 @@ $card-padding: 1rem;
       }
     }
 
-    .text-content {
-      @include span-columns(2.5 of 5);
-    }
+    // .text-content {
+    //   @include span-columns(2.5 of 5);
+    // }
 
     @include media($medium-screen-up) {
       @include span-columns(5);
@@ -153,24 +163,24 @@ $card-padding: 1rem;
       height: auto;
       max-width: none;
       display: inline-block;
-      @include media($large-screen-up) {
-        width: 100%;
-        height: auto;
+      @include media($medium-screen-up) {
+        height: 100%;
+        width: auto;
       }
     }
   }
 
   .text-content {
 
-    padding: 2rem;
-    margin: 2rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
     border: 1px solid white;
     height: 200px;
 
     @include media($medium-screen-up) {
       @include span-columns(6);
       border-left: none;
-      margin: auto;
+      padding: 2rem;
     }
 
     @include media($large-screen-up) {
