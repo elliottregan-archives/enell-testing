@@ -1,0 +1,78 @@
+.fitting-hero {
+
+  overflow: hidden;
+  border: $base-border;
+  height: 800;
+
+  @include media($medium-screen-up) {
+    position: relative;
+    height: auto;
+  }
+
+  .image-content {
+    height: 400px;
+  }
+
+  .image {
+    height: 400px;
+    width: auto;
+    max-width: none;
+
+    @include media($medium-screen-up) {
+      position: absolute;
+      height: 100%;
+      width: auto;
+      top:0;
+    }
+
+  }
+
+  .fitting-chart {
+    right: 0;
+    color: white;
+    font-size: 1rem;
+    background-color: $brand-purple;
+
+    @include media($medium-screen-up) {
+      position: absolute;
+      right: 0;
+      width: 220px;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+    }
+
+    img {
+      height: 100%;
+      margin: auto;
+      display: block;
+    }
+
+  }
+}
+
+.fitting-steps {
+
+  @include padding( 1rem 2rem 2rem);
+
+  .step-title {
+    font-size: modular-scale(2);
+    font-style: italic;
+    color: $brand-purple;
+    font-weight: 600;
+    line-height: 1em;
+    margin-left: 2rem;
+    position: relative;
+
+    &::before {
+      content: "1. ";
+      position: absolute;
+      left: -2rem;
+    }
+  }
+
+  .step-description {
+    font-weight: 600;
+    margin-left: 2rem;
+  }
+}

@@ -1,0 +1,101 @@
+doctype html
+html
+  head
+    include ../chunks/_head.jade
+  body
+    .mobile-menu
+      button.sidebar-toggle
+        i.menu-icon.X-mode
+          .menu-icon__text
+      ul.mobile-links
+        li.mobile-link.mobile
+          a(href="/shop").mobile-link--text Shop
+          ul.mobile-link--submenu
+            li.submenu-link
+              a.submenu-link--text Enell Sport
+            li.submenu-link
+              a.submenu-link--text Enell Lite
+            li.submenu-link
+              a.submenu-link--text Accessories
+            li.submenu-link
+              a.submenu-link--text Retail
+        li.mobile-link
+          a(href="/fitting").mobile-link--text Fitting
+        li.mobile-link.mobile
+          a(href="/community").mobile-link--text Community
+        li.mobile-link
+          a(href="/lifestyle").mobile-link--text Lifestyle
+        li.mobile-link
+          a(href="/about").mobile-link--text About
+    .slideaway_wrapper
+      header
+        include ../chunks/_header.jade
+      main
+        section.content.light_grey.vertically-padded
+          .content-container.store-header
+            .main-image.fitting-hero
+              .image-content
+                img.image(src="https://unsplash.it/960/540")
+              .fitting-chart
+                img(src="../images/fitting-chart.svg")
+            .secondary-images
+              .store-card
+                .image-content
+                  img.image(src="https://unsplash.it/220/220?image=42")
+                .text-content
+                  button.btn-default Sport
+              .store-card
+                .image-content
+                  img.image(src="https://unsplash.it/220/220?image=43")
+                .text-content
+                  button.btn-default Lite
+        section.content.vertically-padded
+          .content-container
+            .store-item-row
+              .store-item.wide
+                blockquote.block-quote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed sapien quam. 
+              .store-item
+                .store-card
+                  .image-content
+                    img.image(src="https://unsplash.it/220/220?image=42")
+                  .text-content
+                    button.btn-default Sport
+        section.content
+          .content-container.to_the_edge
+            a(href="#").block-image-link.pair
+              .block-image
+                img.image(src="https://unsplash.it/310/200?image=532")
+              .block-text-content
+                h3.block-title Community
+            a(href="#").block-image-link.pair
+              .block-image
+                img.image(src="https://unsplash.it/310/200?image=531")
+              .block-text-content
+                h3.block-title Shop Sport
+        section.content
+          article.content-container.standard-content
+            h1 Standard Page
+            hgroup
+              h2 Secondary Heading
+              h3 Subtitle Here
+            p Ut sit amet magna orci. Integer sit amet varius ipsum. Ut mattis ullamcorper fermentum. Integer pretium felis sit amet urna volutpat, ac elementum ante interdum.
+              |Nam auctor eget quam vitae fringilla. Vestibulum quam orci, porttitor in nisl aliquam, placerat gravida ligula. Quisque sed malesuada velit. Proin vulputate velit sed cursus feugiat.
+              |Mauris scelerisque nulla ut mauris iaculis, a euismod nulla eleifend. Maecenas consequat interdum nibh, at tincidunt justo commodo eget. Pellentesque ut pharetra tellus, eu pulvinar ligula. Duis ac nisl rhoncus, ultrices eros sed, consequat orci.
+              |Maecenas volutpat lacus vitae arcu semper, a bibendum urna viverra. Suspendisse congue dolor nec commodo volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus commodo vulputate elementum. Nam sed urna non tellus vulputate molestie sit amet at sapien. Ut sit amet magna orci. Integer sit amet varius ipsum. Ut mattis ullamcorper fermentum. Integer pretium felis sit amet urna volutpat, ac elementum ante interdum.
+            dl.fitting-steps
+              dt.step-title Bust Measurement
+              dd.step-description While wearing your everyday bra, measure around the fullest part of your bust.
+              dt.step-title Rib Measurement
+              dd.step-description Refer to the ENELL size chart to see which ENELL size is your perfect fit.
+              dt.step-title Secure Fit
+              dd.step-description Measure around the rib cage directly under the breasts.
+            h2 Secondary Heading
+            p In et iaculis justo, a bibendum quam. Curabitur accumsan ullamcorper sem, vitae consectetur elit pretium in. Aliquam tempus id risus eu ullamcorper. Proin et accumsan felis, scelerisque molestie sapien.
+              |In vestibulum sapien sed eros cursus lacinia. Cras convallis nulla vitae est vestibulum sodales. Nullam congue ipsum diam, a volutpat lacus sollicitudin in. Etiam sed iaculis lorem, vitae bibendum massa.
+              |Vestibulum ac interdum diam. Aenean pretium scelerisque vulputate. Duis accumsan blandit ipsum nec fringilla. Vivamus suscipit hendrerit dolor id ultrices.
+              |Nunc sapien nulla, volutpat at accumsan non, aliquam nec diam. Etiam tempus, augue at malesuada adipiscing, mauris tellus suscipit lorem, a porta ipsum ligula vel dui. In a augue nulla. Phasellus pretium metus quis sem dapibus sodales.
+            img.full-width-image(src="https://unsplash.it/960/400?random")
+
+
+      footer
+        include ../chunks/_footer.jade

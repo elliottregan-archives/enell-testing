@@ -35,6 +35,31 @@
 
 .standard-content {
 
+  h1 {
+    margin-bottom :0;
+    line-height: 1;
+  }
+
+  h2 {
+    font-family: $alt-heading-font-family;
+    font-size: modular-scale(1);
+    font-weight: 500;
+  }
+
+  h3 {
+    font-family: $alt-heading-font-family;
+    font-size: modular-scale(-1);
+    color: $brand-purple;
+  }
+
+  hgroup {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
   &.with-sidebar {
     @include media($medium-screen-up) {
       @include span-columns(6);
