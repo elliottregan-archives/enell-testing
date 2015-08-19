@@ -11,6 +11,7 @@
   margin-bottom: 1rem;
   font-size: .7rem;
 
+
   @include padding(2rem);
 
   @include media($medium-screen-up) {
@@ -23,6 +24,8 @@
     @include span-columns(3);
     @include omega-reset(3n);
   };
+
+  display: none;
 
   .footer-column--title {
     font-weight: 500;
@@ -38,6 +41,7 @@
 }
 
 .footer-column.signup-column {
+  display: block;
 
   @include media($medium-screen-up) {
     @include flex(none);
@@ -83,4 +87,21 @@
       background-color: $brand-purple;
     }
   }
+}
+
+.mobile-shortcuts {
+  @include media($medium-screen-up) {
+    display: none;
+  }
+}
+
+.mobile-shortcut {
+  display: block;
+  text-align: center;
+  padding: .5rem;
+  font-size: modular-scale(2);
+  font-family: $heading-font-family;
+  text-transform: uppercase;
+  color: $grey;
+  border-bottom: $base-border;
 }

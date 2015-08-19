@@ -178,6 +178,10 @@ $card-padding: 1rem;
     }
   }
 
+  .title {
+    font-size: 2em;
+  }
+
   .text {
     height: (1em*$base-line-height)*3;
     text-overflow: ellipsis;
