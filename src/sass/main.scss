@@ -48,4 +48,8 @@ body {
 .content-container {
   @include outer-container();
   @include padding(0 1rem);
+
+  &.to_the_edge {
+    @include padding(0 0);
+  }
 }
