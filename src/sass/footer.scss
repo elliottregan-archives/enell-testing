@@ -41,7 +41,7 @@
 }
 
 .footer-column.signup-column {
-  display: block;
+  position: relative;
 
   @include media($medium-screen-up) {
     @include flex(none);
@@ -56,6 +56,7 @@
     @include omega-reset(3n);
     border: $base-border;
   };
+
 }
 
 .footer-logo {
@@ -68,11 +69,24 @@
 .legal-stuff {
   text-align: center;
   margin: 0;
+  padding: 1rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-family: $alt-heading-font-family;
+  font-size: .8em;
 }
 
 .content-container.follow-us {
   text-align: center;
   padding: 2rem 0;
+}
+
+.follow-header {
+  font-weight: 200;
+  font-family: $alt-heading-font-family;
+  color: $grey;
+  margin-bottom: 1rem;
 }
 
 .round-social-links {
@@ -81,8 +95,11 @@
     display: inline-block;
     @include size(3rem);
     border-radius: 3rem;
-    background-color: $light-grey;
+    background-color: $grey;
     color: white;
+    vertical-align: middle;
+    font-size: 1.5rem;
+    margin: 0 .5rem;
 
     &:hover {
       background-color: $brand-purple;
@@ -105,4 +122,80 @@
   text-transform: uppercase;
   color: $grey;
   border-bottom: $base-border;
+
+  &:hover {
+    background-color: $brand-purple;
+    color: white;
+  }
+}
+
+button.footer-btn {
+  background-color: whitesmoke;
+  color: $grey;
+  border: $base-border;
+  position: relative;
+  height: 44px;
+  font-weight: 500;
+  text-align: left;
+  padding-left: 1rem;
+  margin: 1rem 0 .5rem;
+
+  &::after {
+    content: "»";
+    font-size: 2em;
+    line-height: .5;
+    font-weight: 200;
+    font-family: Arial;
+    position: absolute;
+    right: -46px;
+    top: -1px;
+    padding: .5rem;
+    height: 44px;
+    width: 44px;
+    background-color: whitesmoke;
+    color: $grey;
+    border: $base-border;
+    border-color: $light-grey;
+
+  }
+
+
+  @include media($medium-screen-up) {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    width: 60%;
+  }
+
+  @include media($large-screen-up) {
+    display: block;
+    position: static;
+  }
+}
+
+.footer-column--title, .signup-column .footer-text {
+  @include media($medium-screen-up) {
+    width: 40%;
+  }
+}
+
+.content-container.mobile-signup-column {
+  display: block;
+  background-color: whitesmoke;
+  padding: 2rem;
+
+  h3 {
+    font-weight: 500;
+  }
+
+  p {
+    color: lighten($dark-grey, 40%);
+  }
+
+  button.footer-btn {
+    width: 90%;
+    display: block;
+    margin-right: 80px;
+  }
 }
