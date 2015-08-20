@@ -181,9 +181,12 @@ button.footer-btn {
 }
 
 .content-container.mobile-signup-column {
-  display: block;
   background-color: whitesmoke;
   padding: 2rem;
+
+  @include media($medium-screen-up) {
+    display: none;
+  }
 
   h3 {
     font-weight: 500;
