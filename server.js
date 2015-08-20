@@ -14,6 +14,10 @@ var sitePages = [
   "/"
 ]
 
+app.get('/source', function *() {
+  yield send(this,__dirname + '/tmp.zip');
+})
+
 app.get('/', function *() {
   yield send(this,__dirname + '/tmp/templates/index.html');
 })
