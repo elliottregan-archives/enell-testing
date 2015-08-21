@@ -7,6 +7,12 @@
   "ascent": 850,
   "glyphs": [
     {
+      "uid": "vqyhv5kmwcj9zxq28dhq5npykr2k39co",
+      "css": "basket",
+      "code": 59404,
+      "src": "modernpics"
+    },
+    {
       "uid": "799d6108751f684ac9d018983251a08f",
       "css": "pinterest",
       "code": 59393,
@@ -71,6 +77,12 @@
       "css": "instagram-filled",
       "code": 59400,
       "src": "brandico"
+    },
+    {
+      "uid": "990d39e5b7e9750c55d2593b1cc61a0a",
+      "css": "youtube-1",
+      "code": 59403,
+      "src": "elusive"
     }
   ]
 }

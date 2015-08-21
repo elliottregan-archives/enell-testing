@@ -178,6 +178,10 @@ button.footer-btn {
   @include media($medium-screen-up) {
     width: 40%;
   }
+
+  @include media($large-screen-up) {
+    width: 100%;
+  }
 }
 
 .content-container.mobile-signup-column {
